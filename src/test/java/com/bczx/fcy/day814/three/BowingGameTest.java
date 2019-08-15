@@ -1,4 +1,4 @@
-package com.bczx.fcy.day813.one;
+package com.bczx.fcy.day814.three;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +22,7 @@ public class BowingGameTest {
 
   @Test
   public void testAllOnes() {
-    int n = 20;
+    int n = 0;
     int pins = 1;
     rollMany(n, pins);
     assertEquals(20, g.score());
@@ -53,7 +53,7 @@ public class BowingGameTest {
     g.roll(3);
     g.roll(4);
     rollMany(16, 0);
-    assertEquals(24, g.score());
+    assertEquals(24, g.score()  );
   }
 
   private void rollStrike() {
@@ -66,4 +66,3 @@ public class BowingGameTest {
     assertEquals(300, g.score());
   }
 }
-

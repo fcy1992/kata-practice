@@ -1,4 +1,4 @@
-package com.bczx.fcy.day813.one;
+package com.bczx.fcy.day815.two;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -66,4 +66,3 @@ public class BowingGameTest {
     assertEquals(300, g.score());
   }
 }
-

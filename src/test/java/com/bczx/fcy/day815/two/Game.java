@@ -1,4 +1,4 @@
-package com.bczx.fcy.day813.two;
+package com.bczx.fcy.day815.two;
 
 public class Game {
 
@@ -25,7 +25,7 @@ public class Game {
         rollIndex += 2;
       }
     }
-    return score ;
+    return score;
   }
 
   private int normalScore(int rollIndex) {
