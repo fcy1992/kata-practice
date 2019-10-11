@@ -17,18 +17,18 @@ public class Practice {
 
   @Test
   public void testLazySingleton() {
-    for (int j = 0; j < 100; j++) {
+//    for (int j = 0; j < 100; j++) {
       for (int i = 0; i < 100; i++) {
 //        System.out.println("thread-" + i);
         executorService.execute(new SingletonLazyRunner());
       }
-      try {
-        Thread.sleep(20);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
-      SingletonLazy.getSingletonLazy().printInitCount();
-    }
+//      try {
+//        Thread.sleep(20);
+//      } catch (InterruptedException e) {
+//        e.printStackTrace();
+//      }
+//      SingletonLazy.getSingletonLazy().printInitCount();
+//    }
   }
 
   @Test

@@ -4,19 +4,20 @@ import java.util.Objects;
 
 public class SingletonLazy {
 
-  private Integer initCount = 0;
+  private volatile Integer initCount = 0;
 
   private SingletonLazy() {}
 
   private volatile static SingletonLazy singletonLazy;
 
-  public static SingletonLazy getSingletonLazy() {
+  public synchronized static SingletonLazy getSingletonLazy() {
     if (Objects.isNull(singletonLazy)) {
-      synchronized (singletonLazy) {
+//      synchronized (singletonLazy) {
         if (Objects.isNull(singletonLazy)) {
           singletonLazy = new SingletonLazy();
+//          return singletonLazy;
         }
-      }
+//      }
     }
     return singletonLazy;
   }
@@ -26,11 +27,13 @@ public class SingletonLazy {
       initCount ++;
 //      System.out.println(this.initCount);
 //    }
-//    System.out.println(this.hashCode());
+    System.out.println(this.hashCode());
   }
 
-  public Integer getInitCount() {
-    return initCount;
+  public synchronized Integer getInitCount() {
+//    synchronized (SingletonLazy.class) {
+      return initCount;
+//    }
   }
 
   public void printInitCount() {

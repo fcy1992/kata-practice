@@ -6,5 +6,6 @@ public class SingletonLazyRunner implements Runnable {
   public void run() {
     SingletonLazy singletonLazy = SingletonLazy.getSingletonLazy();
     singletonLazy.print();
+    System.out.println(singletonLazy.getInitCount());
   }
 }
