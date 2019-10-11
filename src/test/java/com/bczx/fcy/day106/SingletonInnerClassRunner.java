@@ -1,10 +1,12 @@
-package com.bczx.fcy.day105;
+package com.bczx.fcy.day106;
 
-public class SingletonLazyRunner implements Runnable {
+import com.bczx.fcy.day105.SingletonLazy;
+
+public class SingletonInnerClassRunner implements Runnable {
 
   @Override
   public void run() {
-    SingletonLazy singletonLazy = SingletonLazy.getSingletonLazy();
+    SingletonInnerClass singletonLazy = SingletonInnerClass.getInstance();
     singletonLazy.print();
   }
 }

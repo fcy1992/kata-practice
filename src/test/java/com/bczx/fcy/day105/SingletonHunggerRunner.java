@@ -1,10 +1,10 @@
 package com.bczx.fcy.day105;
 
-public class SingletonLazyRunner implements Runnable {
+public class SingletonHunggerRunner implements Runnable {
 
   @Override
   public void run() {
-    SingletonLazy singletonLazy = SingletonLazy.getSingletonLazy();
-    singletonLazy.print();
+    SingletonHugger singletonHugger = SingletonHugger.getInstance();
+    singletonHugger.print();
   }
 }

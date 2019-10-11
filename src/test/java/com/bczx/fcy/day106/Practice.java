@@ -1,5 +1,8 @@
-package com.bczx.fcy.day105;
+package com.bczx.fcy.day106;
 
+import com.bczx.fcy.day105.SingletonHunggerRunner;
+import com.bczx.fcy.day105.SingletonLazy;
+import com.bczx.fcy.day105.SingletonLazyRunner;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,26 +19,16 @@ public class Practice {
   }
 
   @Test
-  public void testLazySingleton() {
-    for (int j = 0; j < 100; j++) {
-      for (int i = 0; i < 100; i++) {
-//        System.out.println("thread-" + i);
-        executorService.execute(new SingletonLazyRunner());
-      }
-      try {
-        Thread.sleep(20);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
-      SingletonLazy.getSingletonLazy().printInitCount();
+  public void testSingletonInnerClass() {
+    for (int i = 0; i < 100; i++) {
+      executorService.execute(new SingletonInnerClassRunner());
     }
   }
 
   @Test
   public void testHuggerSingleton() {
     for (int i = 0; i < 100; i++) {
-      System.out.println("thread-" + i);
-      executorService.execute(new SingletonHunggerRunner());
+      executorService.execute(new SingletonEnumRunner());
     }
   }
 }

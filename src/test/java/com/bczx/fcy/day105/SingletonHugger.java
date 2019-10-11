@@ -1,17 +1,19 @@
 package com.bczx.fcy.day105;
 
-import java.util.Objects;
+public class SingletonHugger {
 
-public class Singleton1 {
+  private volatile Integer initCount = 0;
 
-  private Singleton1() {}
+  private SingletonHugger() {}
 
-  private static Singleton1 singleton1;
+  private static SingletonHugger singletonHugger = new SingletonHugger();
 
-  public static Singleton1 getSingleton1() {
-    if (Objects.isNull(singleton1)) {
-      singleton1 = new Singleton1();
-    }
-    return singleton1;
+  public static SingletonHugger getInstance() {
+    return singletonHugger;
+  }
+
+  public synchronized void print() {
+    initCount ++;
+    System.out.println(initCount);
   }
 }
