@@ -3,8 +3,7 @@ package com.bczx.fcy.day1013;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 public class ThreadPractice {
 
@@ -12,7 +11,8 @@ public class ThreadPractice {
 
   @Before
   public void setUp() throws Exception {
-    executorService = Executors.newFixedThreadPool(1000);
+    executorService = new ThreadPoolExecutor(20, 100, 0L,
+            TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>());
   }
 
   @Test
