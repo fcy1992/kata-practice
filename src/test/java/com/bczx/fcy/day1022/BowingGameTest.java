@@ -1,11 +1,11 @@
-package com.bczx.fcy.day1015;
+package com.bczx.fcy.day1022;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class BowlingGameTest {
+public class BowingGameTest {
 
   private Game g;
 

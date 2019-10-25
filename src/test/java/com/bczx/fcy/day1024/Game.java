@@ -1,4 +1,4 @@
-package com.bczx.fcy.day1015;
+package com.bczx.fcy.day1024;
 
 public class Game {
 

@@ -1,4 +1,4 @@
-package com.bczx.fcy.day1015;
+package com.bczx.fcy.day1025;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +16,7 @@ public class BowlingGameTest {
 
   @Test
   public void testGetGame() {
-    rollMany(20, 0);
+    rollMan(20, 0);
     assertEquals(0, g.score());
   }
 
@@ -24,11 +24,11 @@ public class BowlingGameTest {
   public void testAllOnes() {
     int n = 20;
     int pins = 1;
-    rollMany(n, pins);
+    rollMan(n, pins);
     assertEquals(20, g.score());
   }
 
-  private void rollMany(int n, int pins) {
+  private void rollMan(int n, int pins) {
     for (int i = 0; i < n; i++) {
       g.roll(pins);
     }
@@ -38,7 +38,7 @@ public class BowlingGameTest {
   public void testOneSpare() {
     rollSpare();
     g.roll(3);
-    rollMany(17, 0);
+    rollMan(17, 0);
     assertEquals(16, g.score());
   }
 
@@ -49,20 +49,16 @@ public class BowlingGameTest {
 
   @Test
   public void testOneStrike() {
-    rollStrike();
+    g.roll(10);
     g.roll(3);
     g.roll(4);
-    rollMany(16, 0);
+    rollMan(16, 0);
     assertEquals(24, g.score());
-  }
-
-  private void rollStrike() {
-    g.roll(10);
   }
 
   @Test
   public void testPerfectGame() {
-    rollMany(12, 10);
+    rollMan(12, 10);
     assertEquals(300, g.score());
   }
 }

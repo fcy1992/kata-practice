@@ -1,4 +1,4 @@
-package com.bczx.fcy.day1015;
+package com.bczx.fcy.day1021;
 
 public class Game {
 
@@ -21,14 +21,14 @@ public class Game {
         score += strikeBonus(rollIndex);
         rollIndex += 1;
       } else {
-        score += normalScore(rollIndex);
+        score += normaScore(rollIndex);
         rollIndex += 2;
       }
     }
     return score;
   }
 
-  private int normalScore(int rollIndex) {
+  private int normaScore(int rollIndex) {
     return rolls[rollIndex] + rolls[rollIndex + 1];
   }
 

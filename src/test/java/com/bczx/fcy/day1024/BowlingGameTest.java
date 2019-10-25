@@ -1,4 +1,4 @@
-package com.bczx.fcy.day1015;
+package com.bczx.fcy.day1024;
 
 import org.junit.Before;
 import org.junit.Test;
