@@ -2,10 +2,10 @@ package com.bczx.fcy.day1029;
 
 public class SingletonInnerClass {
 
-  private SingletonInnerClass(){}
+  private SingletonInnerClass() {}
 
   private static class SingletonHolder {
-    private static SingletonInnerClass instance = new SingletonInnerClass();
+    private static final SingletonInnerClass instance = new SingletonInnerClass();
   }
 
   public static SingletonInnerClass getInstance(){

@@ -4,7 +4,7 @@ public class SingletonHunger {
 
   private SingletonHunger(){}
 
-  private static SingletonHunger instance = new SingletonHunger();
+  private static final SingletonHunger instance = new SingletonHunger();
 
   public static SingletonHunger getInstance(){
     return instance;

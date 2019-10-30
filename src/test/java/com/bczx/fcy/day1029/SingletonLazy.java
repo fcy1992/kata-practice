@@ -7,13 +7,15 @@ public class SingletonLazy {
   private static volatile SingletonLazy instance;
 
   public static SingletonLazy getInstance(){
-    if(instance == null){
+    SingletonLazy singletonLazy = instance;
+    if(singletonLazy == null){
       synchronized(SingletonLazy.class){
-        if(instance == null){
-          instance = new SingletonLazy();
+        singletonLazy = instance;
+        if(singletonLazy == null){
+          singletonLazy = instance = new SingletonLazy();
         }
       }
     }
-    return instance;
+    return singletonLazy;
   }
 }
