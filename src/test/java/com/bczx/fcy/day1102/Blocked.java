@@ -9,12 +9,10 @@ class Blocked extends ThreadState {
 
   public void resume(ThreadContext hj) {
     System.out.print("调用resume()方法-->");
-    if(stateName.equals("阻塞状态"))
-    {
+    if(stateName.equals("阻塞状态")) {
       hj.setState(new Runnable());
     }
-    else
-    {
+    else {
       System.out.println("当前线程不是阻塞状态，不能调用resume()方法.");
     }
   }

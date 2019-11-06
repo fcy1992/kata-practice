@@ -9,12 +9,10 @@ class Runnable extends ThreadState {
 
   public void getCPU(ThreadContext hj) {
     System.out.print("获得CPU时间-->");
-    if(stateName.equals("就绪状态"))
-    {
+    if(stateName.equals("就绪状态")) {
       hj.setState(new Running());
     }
-    else
-    {
+    else {
       System.out.println("当前线程不是就绪状态，不能获取CPU.");
     }
   }
