@@ -1,4 +1,4 @@
-package com.bczx.fcy.day1106;
+package com.bczx.fcy.day1110;
 
 public enum SingletonEnum {
 

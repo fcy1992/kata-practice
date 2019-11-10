@@ -8,5 +8,4 @@ public enum SingletonEnum {
     System.out.println("I'm a enum singleton");
   }
 
-
 }
